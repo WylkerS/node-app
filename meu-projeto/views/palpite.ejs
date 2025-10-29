@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/palpite.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&display=swap"
+      rel="stylesheet"
+    />
+    <title><% title %></title>
+  </head>
+  <body>
+    <h1>Seu palpite foi</h1>
+    <p>
+      <span class="teams" id="fla"><%= fla %></span> x
+      <span class="teams" id="rac"><%= rac %></span>
+    </p>
+    <h1>
+      <% if (fla > rac ) { %>
+      <p>
+        Você provavelmente vai acertar, dalhe <span id="mengo">Mengo</span>!!!
+      </p>
+      <%} if (rac > fla ) { %>
+      <p>Que pena, você provavelmente vai perder</p>
+      <%} if (fla == rac) { %>
+      <p>Quem sabe né...</p>
+      <%} %>
+    </h1>
+    <form action="/"><button>Voltar</button></form>
+    <p id="again">Tente novamente e receba outra resposta!</p>
+  </body>
+</html>
